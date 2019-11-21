@@ -386,7 +386,12 @@ function loop(){
     update();
     draw();
     frames++;
-    
+        document.body.onkeyup = function(e){
+        if(e.keyCode == 32){
+            window.alert("Game is Paused \nClick SPACE to RESUME");
+           
+        }
+    }
     requestAnimationFrame(loop);
 }
 loop();
